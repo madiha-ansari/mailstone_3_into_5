@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+</head>
+<body>
+
+  <h1>mailstone no 3</h1>
+  <hr>
+    <h1>Dynamic Resume Builder</h1>
+  <form id="resumeForm">
+    <h2>Personal Information</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required placeholder="Enter your name">
+    <br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" required placeholder="Enter your email">
+    <br />
+    <label for="phone">Phone Number:</label>
+    <input type="number" id="phone" required placeholder="Enter your phone number" maxlength="11">
+    <br />
+    <h2>Education</h2>
+    <label for="degree">Degree:</label>
+    <input type="text" id="degree" required placeholder="Enter your degree">
+    <br />
+    <label for="institution">Institution:</label>
+    <input type="text" id="institution" required placeholder="Enter your institution">
+    <br />
+    <h2>Work Experience</h2>
+    <label for="jobTitle">Job Title:</label>
+    <input type="text" id="jobTitle" placeholder="Enter your job title">
+    <br />
+    <label for="company">Company:</label>
+    <input type="text" id="company" placeholder="Enter your company name">
+    <br />
+    
+    <h2>Description</h2>
+    <textarea placeholder="Feedback" cols="30px" rows="8"></textarea>
+    <br>
+    
+    <h2>Skills</h2>
+    <select>
+        <option>Your Skills</option>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JAVA SCRIPT</option>
+        <option>TYPE SCRIPT</option>
+        <option>BOOTSCRIPT</option>
+        <option>MEDIA QUERRY</option>
+        <option>NEXTJS</option>
+        <option>REACTJS</option>    
+    </select>
+    <br><br>
+    <h2>Upload the picture</h2>
+ <input type="file">
+
+<br>
+<br>
+<br>
+    <button type="submit">Generate Resume</button>
+  </form>
+<br>
+  <div id="errorMessage" style="color:red;"></div>
+
+  <h2>Generated Resume</h2>
+  <div id="resumePreview">
+    <p><strong>Name:</strong> <span id="resumeName"></span></p>
+    <p><strong>Email:</strong> <span id="resumeEmail"></span></p>
+    <p><strong>Phone:</strong> <span id="resumePhone"></span></p>
+    <p><strong>Qualification:</strong> <span id="resumeDegree"></span></p>
+    <p><strong>Experience:</strong> <span id="resumeInstitution"></span></p>
+   <p><strong>Skills:</strong> <span id="resumeSkills"></span></p>
+   <p><strong>Job Title:</strong> <span id="resumeJobTitle"></span></p>
+   <p><strong>Company:</strong> <span id="resumeCompany"></span></p>
+</div>
+<br>
+<h1>mailstone no 4 Editable Resume</h1>
+<hr>
+<div id="education" class="editable">
+    <h2>Education</h2>
+    <p>(D.A.E) Diploma Associate Engineering CI.T</p>
+</div>
+<div id="experience" class="editable">
+    <h2>Work Experience</h2>
+    <p>Sylani Mass IT Traning</p>
+</div>
+<br><br>
+<h2>mailstone no 5</h2>
+<hr>
+<h1>Create and Share Your Resume</h1>
+<br>
+<div>
+    <label for="username">Enter your username:</label>
+    <input type="text" id="username" placeholder="Your username">
+    <br><br>
+    <button id="generateLinkBtn">Generate Resume Link</button>
+</div>
+<br><br>
+<!-- Display the resume -->
+<div id="resume" class="resume">
+    <div id="education" class="editable">
+        <h2>Education</h2>
+        <p>Pilot Public Academy</p>
+    </div>
+    <div id="experience" class="editable">
+        <h2>Work Experience</h2>
+        <p>Sylani Mass IT Traning</p>
+    </div>
+</div>
+<br>
+<!-- Actions for sharing and downloading -->
+<div id="actions">
+    <p id="shareLink"></p>
+    <button id="downloadBtn">Download as PDF</button>
+</div>
+
+
+
+
+
+  <script src="app.js"></script> <!-- External JS file -->
+</body>
+</html>
